@@ -60,11 +60,15 @@ The calculator registers all button click events at runtime using the `RegisterE
 ## <a id="screenshots">📸 Screenshots</a>
 
 <p align="center">
-  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="Main UI">
+  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="MAIN UI...">
 </p>
 
 <p align="center">
-  <img src="images/CalculatorWithExpression.png" style="max-width: 600px; height: auto;" alt="Expression Example">
+  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="screenshots 1...">
+</p>
+
+<p align="center">
+  <img src="images/CalculatorWithExpression.png" style="max-width: 600px; height: auto;" alt="screenshots 2...">
 </p>
 
 ## <a id="members">👥 Group Members</a>
