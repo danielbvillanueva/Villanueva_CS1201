@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/calcu-banner-wide.png" alt="CALCULATOR GUI Banner" style="width:100%; height:auto;">
+  <img src="images/calcu-banner.png" alt="CALCULATOR GUI Banner" style="width:100%; height:auto;">
 </p>
 
 
