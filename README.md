@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="images/calcu-banner.png" style="width: 300px; height: auto;" alt="LOGO?">
+  <img src="images/calcu-banner.png" style="width: 100%; max-width: 800px; height: auto;" alt="CALCULATOR GUI Banner">
 </p>
+
 
 
 ## 🧮 About
