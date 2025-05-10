@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/CalculatorBanner.jpg" style="max-width: 600px; height: auto;" alt="GUI Calculator">
+  <img src="images/CalculatorBanner.jpg" style="max-width: 600px; height: auto;" alt="LOGO?">
 </p>
 
 ## 🧮 About
