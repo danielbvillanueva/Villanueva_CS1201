@@ -1,130 +1,73 @@
 <p align="center">
-  <img src="images/Calculator_Main_Banner.jpg" style="max-width: 600px; height: auto;" alt="GUICalculator">
+  <img src="images/CalculatorBanner.jpg" style="max-width: 600px; height: auto;" alt="GUI Calculator">
 </p>
 
-# 🧮 GUI Calculator - C# WinForms
-
-## 🌟 About
-**GUI Calculator** is a beginner-friendly Windows Forms (WinForms) application developed using C#. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division through a user-friendly graphical interface. This project demonstrates the use of **object-oriented programming (OOP)** concepts like **encapsulation** and **abstraction**, along with event-driven design in C#.
-
----
+## 🧮 About
+**GUI Calculator** is a Windows Forms application built using C#. It allows users to perform basic arithmetic operations through a user-friendly interface. This calculator supports real-time expression building, sign switching, decimal inputs, and error handling—all while showcasing core object-oriented principles and event-driven programming.
 
 ## 📔 Table of Contents
-- [🎯 Program Features](#-program-features)
-- [⚖️ OOP Principles Used](#️-oop-principles-used)
-- [⚙️ Instructions to Run the App](#️-instructions-to-run-the-app)
-- [📁 File Structure](#-file-structure)
-- [🛠️ Sample Output](#️-sample-output)
-- [📸 Project Screenshots](#-project-screenshots)
-- [👥 Group Members](#-group-members)
-- [💎 Acknowledgements](#-acknowledgements)
+- [Features](#features)
+- [OOP Principles](#oop-principles)
+- [How to Run](#how-to-run)
+- [File Structure](#file-structure)
+- [Screenshots](#screenshots)
+- [Members](#members)
+- [Acknowledgements](#acknowledgements)
 
----
+## <a id="features">🔢 Features</a>
+- Add, subtract, multiply, and divide
+- Real-time expression building
+- Delete individual characters
+- Clear current or all input
+- Sign change button (+/-)
+- Decimal point support
+- Error handling for invalid inputs and math errors
+- Expression preview display
 
-## 🎯 Program Features
-- Clean and responsive Windows Forms user interface
-- Performs:
-  - Addition
-  - Subtraction
-  - Multiplication
-  - Division
-- Prevents divide-by-zero errors
-- Separated UI and logic using modular code design
-- Instant display of calculation results
-
----
-
-## ⚖️ OOP Principles Used
+## <a id="oop-principles">⚖️ OOP Principles Used</a>
 
 ### 🔐 Encapsulation
-Encapsulation means hiding the internal state and requiring interaction through public methods.
+All calculator logic (state, current expression, and UI behavior) is encapsulated inside the `Form1` class. Fields like `expression`, `resultValue`, and flags like `justEvaluated` are private and managed only through methods.
 
-✅ **In This Project:**  
-All arithmetic operations are encapsulated within the `Calculator` class. This protects internal logic and provides clean access through public methods only.
+### 📦 Abstraction
+UI buttons (numbers, operators) use delegated methods like `NumberButton_Click` and `Operator_Click`, abstracting the click behavior through centralized functions.
 
-```csharp
-public class Calculator
-{
-    public double Add(double a, double b) => a + b;
-    public double Subtract(double a, double b) => a - b;
-    public double Multiply(double a, double b) => a * b;
+### 🧠 Event-Driven Logic
+The calculator registers all button click events at runtime using the `RegisterEvents()` method, ensuring maintainable and scalable code.
 
-    public double Divide(double a, double b)
-    {
-        if (b == 0)
-            throw new DivideByZeroException("Cannot divide by zero.");
-        return a / b;
-    }
-}
-```
-
-### 🧼 Abstraction
-Abstraction allows users to interact with a simplified interface without knowing the underlying implementation.
-
-✅ **In This Project:**  
-The `Form1.cs` UI interacts with `Calculator` without knowing how operations are computed. Users just press buttons to perform operations.
-
----
-
-## ⚙️ Instructions to Run the App
+## <a id="how-to-run">⚙️ How to Run</a>
 
 1. Clone or download the repository.
-2. Open the solution (`CalculatorApp.sln`) in **Visual Studio**.
-3. Build the project using **Build > Build Solution** or `Ctrl + Shift + B`.
-4. Run the app using **Debug > Start Debugging** or `F5`.
-5. Use the calculator buttons to perform basic arithmetic.
+2. Open the `.sln` file in Visual Studio.
+3. Ensure all resources and image files are present in the project.
+4. Build and run the application.
+5. Use the calculator with your mouse or keyboard (if extended).
 
----
+## <a id="file-structure">📁 File Structure</a>
 
-## 📁 File Structure
 ```
-├── bin/Debug/net9.0-windows
-│   └── CalculatorApp.exe     # Compiled application
-├── images/                   # Screenshots and banner for README
-├── Calculator.cs             # Contains core calculator logic
-├── Form1.cs                  # Handles button click logic (UI logic)
-├── Form1.Designer.cs         # Contains the visual layout (auto-generated)
-├── CalculatorApp.csproj
-├── CalculatorApp.sln
-├── Program.cs                # Application entry point
-├── README.md                 # Project documentation
+├── bin/Debug
+│   └── CalculatorAppLab4.exe
+├── images/
+│   └── CalculatorBanner.jpg
+├── Form1.cs          # Contains full calculator logic and event handling
+├── Form1.Designer.cs # Auto-generated layout file
+├── Program.cs        # Application entry point
+├── CalculatorAppLab4.csproj
+├── README.md
 ```
 
----
-
-## 🛠️ Sample Output
-```plaintext
-+-------------------------+
-|       45 + 77          |
-|------------------------|
-|        = 122           |
-+-------------------------+
-
-+-------------------------+
-|       9 / 0            |
-|------------------------|
-|    Error: Cannot divide
-     by zero.            |
-+-------------------------+
-```
-
----
-
-## 📸 Project Screenshots
+## <a id="screenshots">📸 Screenshots</a>
 
 <p align="center">
-  <img src="images/MainInterface.png" style="max-width: 600px; height: auto;" alt="Calculator Main Interface">
-</p>
-<p align="center">
-  <img src="images/AdditionExample.png" style="max-width: 600px; height: auto;" alt="Addition Example">
-</p>
-<p align="center">
-  <img src="images/ErrorHandling.png" style="max-width: 600px; height: auto;" alt="Divide by Zero Error">
+  <img src="images/CalculatorUI.png" style="max-width: 600px; height: auto;" alt="Main UI">
 </p>
 
----
+<p align="center">
+  <img src="images/CalculatorWithExpression.png" style="max-width: 600px; height: auto;" alt="Expression Example">
+</p>
 
-## 👥 Group Members
+## <a id="members">👥 Group Members</a>
 
 | Name | SR-Code | 
 |------|---------|
@@ -133,9 +76,5 @@ The `Form1.cs` UI interacts with `Calculator` without knowing how operations are
 | [Villanueva, Daniel](https://github.com/danielbvillanueva) | 23-01037 | 
 | [Tarcelo, Mark Niño](https://github.com/ElgatoMe0w) | 20-08675 | 
 
----
-
-## 💎 Acknowledgements
-Special thanks to our instructor, **Ms. Fatima Marie Agdon**, for guiding us in developing a WinForms project in C#. Through this GUI calculator, we practiced combining OOP concepts with user interface programming.
-
----
+## <a id="acknowledgements">💎 Acknowledgements</a>
+Special thanks to our instructor, **Ms. Fatima Marie Agdon**, for guiding us through event-driven programming and WinForms development. This project enhanced our understanding of C# and GUI applications.
